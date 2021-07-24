@@ -53,6 +53,9 @@ function preload(){
 }
 
 function setup() {
+  
+  // windowWidth - Largura da Janela 
+  // windowHeight - Altura da Janela
   createCanvas(windowWidth, windowHeight);
   
   trex = createSprite(50, 180,20,50);
@@ -73,20 +76,20 @@ function setup() {
   
   
   //6 - Criar o Sprite do Game Over
-  gameover=createSprite(300,100)
+  gameover=createSprite(250,100)
   
   //8 - Adiciona a Imagem ao Sprite Criado
   gameover.addImage(gameover_image)
   
   //9 - Colocar Scala para o Game Over
-   gameover.scale=0.5
+   gameover.scale=0.3
   
   //10 - Declarar que o Game Over tera sua visibilidade falsa
    gameover.visible=false
   
-  reiniciar=createSprite(300,140)
+  reiniciar=createSprite(250,140)
   reiniciar.addImage(reiniciarimage)
-  reiniciar.scale=0.5
+  reiniciar.scale=0.3
   reiniciar.visible=false
    
 }
@@ -100,6 +103,7 @@ if (estadojogo===jogar)  {
     
     
     //saltar quando a tecla de espaço é pressionada
+  // length - COMPRIMENTO - height - ALTURA
     if((touches.length > 0 ||keyDown("space"))&& trex.y >= height-120) {
        trex.velocityY = -13;
       //3 - Atribuir o SomSalto 
