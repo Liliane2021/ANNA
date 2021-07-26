@@ -53,13 +53,13 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(600, 600);
   
   trex = createSprite(50,420,20,50);
   trex.addAnimation("running", trex_correndo);
  trex.addAnimation("collided", trexcolide);
   
-  trex.scale = 0.5;
+  trex.scale = 0.9;
   
   solo = createSprite(200,420,400,20);
    solo.addImage("ground",imagemdosolo);
@@ -171,7 +171,7 @@ function gerarObstaculos(){
  if (frameCount % 60 === 0){
    var obstaculo = createSprite(400,420,10,40);
   obstaculo.velocityX = -6;
-    obstaculo.scale = 0.5;
+    obstaculo.scale = 0.7;
       
     //gerar obstáculos aleatórios
     var rand = Math.round(random(1,6));
@@ -205,7 +205,7 @@ function gerarNuvens() {
   
     
     nuvem.addImage(imagemdanuvem);
-    nuvem.scale = 0.5;
+    nuvem.scale = 0.7;
     nuvem.velocityX = -3;
     
      
