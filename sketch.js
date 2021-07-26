@@ -53,7 +53,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   
   trex = createSprite(50,420,20,50);
   trex.addAnimation("running", trex_correndo);
@@ -103,7 +103,6 @@ if (estadojogo===jogar)  {
     if((touches.length > 0 ||keyDown("space"))&& trex.y >= height -120
        ) {
        
-
        trex.velocityY = -13;
       //3 - Atribuir o SomSalto 
       somSalto.play()
